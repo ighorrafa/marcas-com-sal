@@ -8,15 +8,12 @@
     new Swiper(".swiper-phrases", {
       autoHeight: true,
       loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      centeredSlides: true,
 
       breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 1,
+        // when window width is >= 120px
+        120: {
+          slidesPerView: 1.5,
           spaceBetween: 16,
         },
 
@@ -24,7 +21,10 @@
         1024: {
           slidesPerView: 3,
           spaceBetween: 28,
-          centeredSlides: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
         },
       },
     });

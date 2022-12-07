@@ -126,10 +126,35 @@ section {
 
 #carousel .swiper-slide h1 {
   font-size: 17px;
+  position: relative;
 }
 
 #carousel .swiper-slide.swiper-slide-active h1 {
   color: black;
+}
+
+#carousel .swiper-slide h1:before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  background: #585df9;
+  left: 100%;
+  top: 50%;
+}
+
+@media (max-width: 992px) {
+  #carousel .swiper-slide h1 {
+    width: 170px;
+    margin: 0 auto;
+    padding: 70px 0;
+    border-radius: 50%;
+    border: solid 1px #585df9;
+  }
+  #carousel .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 @media (min-width: 992px) {
@@ -163,6 +188,7 @@ section {
   }
   #entregas .col:not(:last-child) {
     border-right: solid 1px #949494;
+    border-bottom: none;
   }
   #cta h3 {
     font-size: 40px;
@@ -186,5 +212,8 @@ section {
       rgba(255, 255, 255, 1) 80%
     );
     z-index: 10;
+  }
+  #carousel .swiper-slide h1:before {
+    width: 30px;
   }
 }

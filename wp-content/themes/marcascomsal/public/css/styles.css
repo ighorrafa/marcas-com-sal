@@ -1,0 +1,190 @@
+body,
+html {
+  overflow-x: hidden;
+}
+body {
+  padding-top: 0 !important;
+}
+section {
+  display: block;
+}
+.col {
+  padding: 4rem 0;
+}
+.image-cover.desk {
+  min-height: 730px;
+}
+.image-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#banner-primary {
+  position: relative;
+}
+#banner-primary .heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#us {
+  padding: 6rem 0;
+  background-color: #f6f6f6;
+}
+#us p {
+  color: #585df9;
+  font-size: 28px;
+  font-weight: 700;
+}
+#tempero,
+#entregas {
+  padding-top: 72px;
+  display: block;
+  padding-bottom: 0;
+}
+#tempero h6,
+#entregas h6,
+#carousel h6 {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 56px;
+  font-family: "flamamediumregular";
+}
+#tempero h3,
+#entregas h3 {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  font-family: "flamalightregular";
+}
+#tempero p,
+#entregas p {
+  font-size: 16px;
+  color: #000;
+}
+#tempero strong {
+  color: #585df9;
+}
+#cta {
+  text-align: center;
+  padding: 6rem 0;
+}
+#cta h3 {
+  font-family: "flamamediumregular";
+  font-size: 32px;
+  color: #f6f6f6;
+  margin-bottom: 40px;
+}
+#cta .btn-theme {
+  padding: 12px 20px;
+  border: solid 1px #fff;
+  font-family: "flamamediumregular";
+  font-size: 16px;
+}
+.pt-22vh {
+  padding-top: 22vh;
+}
+.pb-15vh {
+  padding-bottom: 15vh;
+}
+#entregas {
+  background-color: #f6f6f6;
+}
+#entregas ul {
+  list-style: disc;
+  padding-left: 1.7rem;
+}
+#entregas li {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  font-family: "flamaregular";
+}
+
+#entregas .col {
+  padding: 2rem 0;
+  padding-bottom: 60px;
+  border-bottom: solid 1px #949494;
+}
+
+#carousel {
+  padding: 100px 0;
+  position: relative;
+}
+
+#carousel .swiper {
+  position: relative;
+}
+
+#carousel .swiper-slide {
+  text-align: center;
+}
+
+#carousel .swiper-slide h1 {
+  font-size: 17px;
+}
+
+#carousel .swiper-slide.swiper-slide-active h1 {
+  color: black;
+}
+
+@media (min-width: 992px) {
+  #us .col {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .col-lg-4 {
+    max-width: 33.33%;
+  }
+  .col-lg-7 {
+    max-width: 58.33%;
+  }
+  #tempero {
+    padding: 160px 0;
+  }
+  #entregas {
+    padding-top: 100px;
+  }
+  #tempero h6,
+  #entregas h6 {
+    font-size: 18px;
+    margin-bottom: 72px;
+  }
+  #tempero .col {
+    padding: 0 13rem 0 0;
+  }
+  #entregas .col {
+    margin-right: 2rem;
+    padding-bottom: 100px;
+  }
+  #entregas .col:not(:last-child) {
+    border-right: solid 1px #949494;
+  }
+  #cta h3 {
+    font-size: 40px;
+  }
+  #carousel .swiper-slide h1 {
+    font-size: 36px;
+    padding: 25px 110px;
+    border: solid 1px #585df9;
+    border-radius: 100px;
+  }
+  #carousel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(9, 9, 121, 0) 50%,
+      rgba(255, 255, 255, 1) 80%
+    );
+    z-index: 10;
+  }
+}

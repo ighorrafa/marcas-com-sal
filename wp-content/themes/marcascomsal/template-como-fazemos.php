@@ -8,8 +8,8 @@ get_header();
     <div class="image-cover desk background-black bg-black"></div>
     <div class="heading">
         <div class="container">
-            <h1 class="lg:max-w-[50%] text-white pt-22vh pb-15vh mxlg:typography-h2 lg:typography-h1 page-title"><?php the_field('title'); ?></h1>
             <div class="lg:max-w-[50%] text-[16px] mxlg:text-[20px] lg:text-[18px] leading-[1.58em] text-white"><?php the_field('description'); ?></div>
+            <h1 class="lg:max-w-[50%] text-white pt-22vh pb-15vh mxlg:typography-h2 lg:typography-h1 page-title"><?php the_field('title'); ?></h1>
         </div>
     </div>
 </section>

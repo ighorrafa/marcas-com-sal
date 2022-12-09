@@ -44,7 +44,7 @@ $body_class = 'bg-white text-cinza-medio font-sans';
 if (function_exists("get_field") && is_singular('mcsprojeto') && 'branco' == get_field("cor_do_cabecalho")) {
     $body_class .= ' header-invert';
 }
-if (is_page_template('page-contato.php') || is_page_template('template-como-fazemos.php')) {
+if (is_page_template('page-contato.php') || is_page_template('template-como-fazemos.php') || is_archive('projetos')) {
     $body_class .= ' header-invert';
 }
 ?>

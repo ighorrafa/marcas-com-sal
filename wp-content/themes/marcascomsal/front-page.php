@@ -68,14 +68,13 @@ endif;
 wp_reset_postdata();
 ?>
 
-<article class="container pt-[120px] text-center">
+<article class="container py-120 text-center">
     <div class="lg:w-[50%] mx-auto">
         <h2 class="font-sans-medium text-black mxlg:leading-[1.375em] lg:leading-[1.16em] text-[16px] lg:text-[24px]"><?php the_field('dst3_texto') ?></h2>
         <?php $link3 = get_field('dst3_link') ?>
         <a class="link-external link-home no-underline font-sans-medium mxlg:mt-[12px] lg:mt-[16px] lg:text-[17px] text-black" href="<?php echo $link3['url']; ?>"><?php echo $link3['title']; ?></a>
     </div>
 </article>
-
 <?php if (function_exists("get_field") && get_field("dst1_titulo") && get_field("dst1_texto")) { ?>
     <article class="container pt-[120px] mxlg:pb-[90px] lg:pb-[50px] lg:flex">
         <div class="lg:w-[33.33vw]">

@@ -25,35 +25,14 @@ get_header();
     <!-- /.container -->
 <?php } ?>
 
-<div class="container projects-list mxlg:pb-[80px] lg:pb-[75px]">
 
-    <?php
-    if (have_posts()) {
-        while (have_posts()) : the_post();
-    ?>
-            <article <?php post_class('projects-list-item'); ?>>
-                <a href="<?php the_permalink(); ?>">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <figure class="mb-[12px]">
-                            <?php the_post_thumbnail('projeto-thumb', array('class' => 'w-full')); ?>
-                        </figure>
-                    <?php endif; ?>
-                    <h2 class="text-black typography-case-thumbnail"><?php the_title(); ?></h2>
-                    <?php if (function_exists("get_field") && get_field("descricao")) { ?>
-                        <p class="typography-project-description"><?php the_field('descricao'); ?></p>
-                    <?php } ?>
-                </a>
-            </article>
-        <?php
-        endwhile; // ( have_posts() ):
-    } else {
-        ?>
-        <p class="font-sans-medium text-[24px] py-[10vh]"><?php esc_attr_e('Desculpe, nenhum projeto encontrado.', 'mcs'); ?></p>
-    <?php
-    }
-    ?>
 
-</div>
+<?php echo do_shortcode('[ajax_load_more loading_style="white" container_type="div" orderby="menu_order" transition_container_classes="projects-list container" post_type="mcsprojeto" posts_per_page="10" scroll="false" button_label="Ver mais"]'); ?>
+
+
+<!-- <div class="text-center py-120">
+    <a href="#!" class="btn-load" id="load-more">Ver mais</a>
+</div> -->
 <!-- /.projects-list -->
 
 <?php if (function_exists("get_field") && have_rows("segmento", 'option')) { ?>

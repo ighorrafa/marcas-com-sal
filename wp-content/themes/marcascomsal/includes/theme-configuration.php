@@ -102,7 +102,7 @@ function mcs_scripts_styles()
     global $post;
 
     $cssVer = '1.0.4';
-    $jsVer = '1.0.4';
+    $jsVer = '1.0.5';
 
     /*
      * Carrega os CSS's comuns

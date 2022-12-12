@@ -169,9 +169,9 @@ function mcs_scripts_styles()
         wp_deregister_script('jquery');
         wp_register_script('jquery', false);
 
-        wp_dequeue_style('wp-block-library');
-        wp_dequeue_style('wp-block-library-theme');
-        wp_dequeue_style('wc-block-style');
+        // wp_dequeue_style('wp-block-library');
+        // wp_dequeue_style('wp-block-library-theme');
+        // wp_dequeue_style('wc-block-style');
 
         if (!is_page('Contato')) {
             wp_dequeue_script('contact-form-7');

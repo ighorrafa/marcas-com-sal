@@ -179,7 +179,7 @@ section {
   background-color: white;
 }
 
-.projects-list {
+.projects-list:first-child {
   position: relative;
   margin-top: -5rem;
 }
@@ -253,9 +253,12 @@ section {
   #takes-mobile .active:after {
     content: "-";
   }
-  .projects-list {
+  .projects-list:first-child {
     position: relative;
     margin-top: -15rem;
+  }
+  .projects-list {
+    margin-bottom: 5rem;
   }
 }
 

@@ -242,7 +242,7 @@ wp_reset_postdata();
             <?php if (have_rows('colunas')) :
                 while (have_rows('colunas')) : the_row(); ?>
                     <div class="lg:w-[33.33vw] col px-5">
-                        <h3><?php the_sub_field('title'); ?></h3>
+                        <h3 class="font-sans-medium"><?php the_sub_field('title'); ?></h3>
                         <p><?php the_sub_field('description'); ?></p>
                     </div>
             <?php endwhile;

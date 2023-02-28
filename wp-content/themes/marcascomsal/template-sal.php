@@ -25,12 +25,12 @@ get_header();
 </section>
 <secition id="tempero">
     <div class="container">
-        <h6><?php the_field('text') ?></h6>
+        <h6 class="font-sans-medium"><?php the_field('text') ?></h6>
         <div class="lg:flex">
             <?php if (have_rows('coluna')) :
                 while (have_rows('coluna')) : the_row(); ?>
                     <div class="lg:w-[33.33vw] col">
-                        <h3><?php the_sub_field('title'); ?></h3>
+                        <h3 class="font-sans-medium"><?php the_sub_field('title'); ?></h3>
                         <?php the_sub_field('description'); ?>
                     </div>
             <?php endwhile;
@@ -39,7 +39,7 @@ get_header();
     </div>
 </secition>
 <section class="container text-white bg-lilas-evolv lg:py-[80px] mxlg:py-[90px]" id="cta">
-    <h3><?php the_field('cta_title'); ?></h3>
+    <h3 class="font-sans-medium"><?php the_field('cta_title'); ?></h3>
     <a href="<?php the_field('button_link') ?>" class="btn-theme"><?php the_field('button_label') ?></a>
 </section>
 

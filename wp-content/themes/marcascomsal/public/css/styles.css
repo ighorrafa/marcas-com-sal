@@ -54,7 +54,6 @@ section {
   color: #000;
   font-weight: 500;
   margin-bottom: 56px;
-  font-family: "flamamediumregular";
 }
 #tempero h3,
 #entregas h3 {
@@ -62,7 +61,6 @@ section {
   font-size: 32px;
   font-weight: 500;
   margin-bottom: 24px;
-  font-family: "flamalightregular";
 }
 #tempero p,
 #entregas p {
@@ -77,7 +75,6 @@ section {
   padding: 6rem 0;
 }
 #cta h3 {
-  font-family: "flamamediumregular";
   font-size: 32px;
   color: #f6f6f6;
   margin-bottom: 40px;
@@ -85,7 +82,6 @@ section {
 #cta .btn-theme {
   padding: 12px 20px;
   border: solid 1px #fff;
-  font-family: "flamamediumregular";
   font-size: 16px;
 }
 .pt-22vh {
@@ -105,10 +101,10 @@ section {
   font-size: 16px;
   color: #000;
   font-weight: 500;
-  font-family: "flamaregular";
+  font-family: "flamaregular", sans-serif;
 }
 
-#entregas .col {
+#entregas .col:not(:last-child) {
   padding: 2rem 0;
   padding-bottom: 60px;
   border-bottom: solid 1px #949494;
@@ -151,7 +147,6 @@ section {
 }
 
 #takes-desk h3 {
-  font-family: "flamalightregular";
   font-size: 32px;
   margin-bottom: 20px;
 }
@@ -214,7 +209,7 @@ section {
   }
   #takes-mobile .accordion {
     background-color: #585df9;
-    font-family: "flamalightregular";
+    font-family: "flamalightregular", sans-serif;
     font-size: 24px;
     color: #fff;
     cursor: pointer;

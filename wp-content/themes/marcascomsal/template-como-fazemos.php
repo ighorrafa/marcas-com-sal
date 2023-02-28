@@ -15,13 +15,13 @@ get_header();
 </section>
 <section id="carousel">
     <div class="container">
-        <h6><?php the_field('sub_title_1') ?></h6>
+        <h6 class="font-sans-medium"><?php the_field('sub_title_1') ?></h6>
         <div class="swiper swiper-phrases">
             <div class="swiper-wrapper">
                 <?php if (have_rows('carousel')) :
                     while (have_rows('carousel')) : the_row(); ?>
                         <div class="swiper-slide">
-                            <h1><?php the_sub_field('label') ?></h1>
+                            <h1 class="font-sans-medium"><?php the_sub_field('label') ?></h1>
                         </div>
                 <?php endwhile;
                 endif; ?>
@@ -33,11 +33,11 @@ get_header();
 </section>
 <section id="entregas">
     <div class="container">
-        <h6><?php the_field('sub_title_2') ?></h6>
+        <h6 class="font-sans-medium"><?php the_field('sub_title_2') ?></h6>
         <div class="lg:flex">
             <?php if (have_rows('colunas')) :
                 while (have_rows('colunas')) : the_row(); ?>
-                    <div class="lg:w-[33.33vw] col">
+                    <div class="lg:w-[25vw] col">
                         <h3><?php the_sub_field('title'); ?></h3>
                         <?php the_sub_field('description'); ?>
                     </div>

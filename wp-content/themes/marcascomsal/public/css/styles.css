@@ -2,6 +2,7 @@ body,
 html {
   overflow-x: hidden;
 }
+
 body {
   padding-top: 0 !important;
 }
@@ -54,6 +55,8 @@ section {
   color: #000;
   font-weight: 500;
   margin-bottom: 56px;
+  z-index: 11;
+  position: relative;
 }
 #tempero h3,
 #entregas h3 {
@@ -104,9 +107,12 @@ section {
   font-family: "flamaregular", sans-serif;
 }
 
-#entregas .col:not(:last-child) {
+#entregas .col {
   padding: 2rem 0;
   padding-bottom: 60px;
+}
+
+#entregas .col:not(:last-child) {
   border-bottom: solid 1px #949494;
 }
 
@@ -186,6 +192,10 @@ section {
 
 .pt-5 {
   padding-top: 5rem;
+}
+
+.ajax-load-more-wrap.white .alm-load-more-btn {
+  font-family: "anothergroteskmedium";
 }
 
 @media (max-width: 992px) {

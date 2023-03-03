@@ -72,7 +72,7 @@ wp_reset_postdata();
     <div class="lg:w-[50%] mx-auto">
         <h2 class="font-sans-medium text-black mxlg:leading-[1.375em] lg:leading-[1.16em] text-[16px] lg:text-[24px]"><?php the_field('dst3_texto') ?></h2>
         <?php $link3 = get_field('dst3_link') ?>
-        <a class="link-external link-home no-underline font-sans-medium mxlg:mt-[12px] lg:mt-[16px] lg:text-[17px] text-black" href="<?php echo $link3['url']; ?>"><?php echo $link3['title']; ?></a>
+        <a class="link-external link-home no-underline font-sans-semibold mxlg:mt-[12px] lg:mt-[16px] lg:text-[17px] text-black" href="<?php echo $link3['url']; ?>"><?php echo $link3['title']; ?></a>
     </div>
 </article>
 <?php if (function_exists("get_field") && get_field("dst1_titulo") && get_field("dst1_texto")) { ?>
@@ -85,7 +85,7 @@ wp_reset_postdata();
                 <?php the_field("dst1_texto"); ?>
                 <?php if (get_field('dst1_link')) {
                     $link1 = get_field('dst1_link'); ?>
-                    <a class="link-external link-home no-underline font-sans-medium mxlg:mt-[12px] lg:mt-[16px]" <?php if ('_blank' == $link1['target']) {
+                    <a class="link-external link-home no-underline font-sans-semibold mxlg:mt-[12px] lg:mt-[16px]" <?php if ('_blank' == $link1['target']) {
                                                                                                                         echo 'target="_blank"';
                                                                                                                     } ?> href="<?php echo $link1['url']; ?>"><?php echo $link1['title']; ?></a>
                 <?php } ?>

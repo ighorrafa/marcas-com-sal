@@ -15,6 +15,37 @@
 <html <?php language_attributes(); ?> data-is-mobile="<?php echo wp_is_mobile(); ?>">
 
 <head>
+    <style>
+        @font-face {
+            font-family: 'anothergrotesk';
+            src: url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff2') format('woff2'),
+                url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+            font-style: normal;
+
+        }
+
+        @font-face {
+            font-family: 'anothergrotesksemibold';
+            src: url('<?php echo public_url(); ?>fonts/anothergrotesk-semibold-webfont.woff2') format('woff2'),
+                url('<?php echo public_url(); ?>fonts/anothergrotesk-semibold-webfont.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+            font-style: normal;
+
+        }
+
+        @font-face {
+            font-family: 'anothergroteskmedium';
+            src: url('<?php echo public_url(); ?>fonts/anothergrotesk-medium-webfont.woff2') format('woff2'),
+                url('<?php echo public_url(); ?>fonts/anothergrotesk-medium-webfont.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+            font-style: normal;
+
+        }
+    </style>
 
     <?php
     // Google Analytics - código de monitoramento

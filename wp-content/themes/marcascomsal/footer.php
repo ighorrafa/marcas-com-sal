@@ -32,15 +32,15 @@
             <?php endif; ?>
             <div class="lg:mt-[50px] lg:flex typography-footer-text mxlg:mt-[45px]">
                 <?php if (function_exists("get_field") && get_page_by_path('contato') && get_field("endereco_rodape", get_page_by_path('contato')->ID)) { ?>
-                    <div class="lg:w-[23.42vw] lg:pr-[20px]">
+                    <div class="lg:w-[23.42vw] lg:pr-[20px] font-sans-semibold">
                         <?php the_field("endereco_rodape", get_page_by_path('contato')->ID); ?>
                         <?php if (get_field("telefone", get_page_by_path('contato')->ID)) { ?>
-                            <a href="tel:<?php the_field("telefone", get_page_by_path('contato')->ID); ?>"><?php the_field("telefone", get_page_by_path('contato')->ID); ?></a>
+                            <a class="font-sans-semibold" href="tel:<?php the_field("telefone", get_page_by_path('contato')->ID); ?>"><?php the_field("telefone", get_page_by_path('contato')->ID); ?></a>
                         <?php } ?>
                     </div>
                 <?php } ?>
                 <?php if (function_exists("get_field") && get_page_by_path('contato') && get_field("email", get_page_by_path('contato')->ID)) { ?>
-                    <div class="mxlg:mt-[25px]"><?php the_field("email", get_page_by_path('contato')->ID); ?></div>
+                    <div class="font-sans-semibold mxlg:mt-[25px]"><?php the_field("email", get_page_by_path('contato')->ID); ?></div>
                 <?php } ?>
             </div>
         </div>
@@ -53,38 +53,6 @@
 
 </div>
 <!-- /#page -->
-
-<style>
-    @font-face {
-        font-family: 'flamaregular';
-        src: url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff2') format('woff2'),
-            url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-display: swap;
-        font-style: normal;
-
-    }
-
-    @font-face {
-        font-family: 'flamalightregular';
-        src: url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff2') format('woff2'),
-            url('<?php echo public_url(); ?>fonts/anothergrotesk-regular-webfont.woff') format('woff');
-        font-weight: normal;
-        font-display: swap;
-        font-style: normal;
-
-    }
-
-    @font-face {
-        font-family: 'flamamediumregular';
-        src: url('<?php echo public_url(); ?>fonts/anothergrotesk-medium-webfont.woff2') format('woff2'),
-            url('<?php echo public_url(); ?>fonts/anothergrotesk-medium-webfont.woff') format('woff');
-        font-weight: normal;
-        font-display: swap;
-        font-style: normal;
-
-    }
-</style>
 
 <?php wp_footer(); ?>
 

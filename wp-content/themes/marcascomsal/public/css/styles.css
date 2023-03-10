@@ -104,7 +104,7 @@ section {
   font-size: 16px;
   color: #000;
   font-weight: 500;
-  font-family: "flamaregular", sans-serif;
+  font-family: "anothergrotesk", sans-serif;
 }
 
 #entregas .col {
@@ -219,7 +219,7 @@ section {
   }
   #takes-mobile .accordion {
     background-color: #585df9;
-    font-family: "flamalightregular", sans-serif;
+    font-family: "anothergroteskmedium", sans-serif;
     font-size: 24px;
     color: #fff;
     cursor: pointer;

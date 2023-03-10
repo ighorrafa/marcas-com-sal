@@ -1841,7 +1841,7 @@ html.header-background:not(.menu-mobile-open) body.header-invert .site-header {
 
   @media (min-width: 1024px) {
     .site-header .menu-item a {
-      font-family: "anothergrotesk", Arial, sans-serif;
+      font-family: "anothergroteskmedium", Arial, sans-serif;
       font-size: 12px;
       line-height: 2.25em;
     }

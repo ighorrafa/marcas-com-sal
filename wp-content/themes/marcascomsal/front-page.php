@@ -11,26 +11,43 @@
 get_header();
 ?>
 
-<?php
-$projetos_car_arr = array(
-    'post_type' => 'mcsprojeto',
-    'posts_per_page' => 5,
-    'meta_query' => array(
-        array(
-            'key'     => 'carousel_home',
-            'value'   => '1',
-            'compare' => 'LIKE',
-        ),
-    ),
-    'orderby' => 'rand'
-);
+<div class="swiper-cover swiper-container">
+    <div class="swiper-wrapper">
+        <?php if (get_field('ativar_banner') == 1) : ?>
+            <div class="swiper-slide">
+                <a href="<?php the_field('banner_link'); ?>">
+                    <figure>
+                        <?php mcs_img_tag_generate(get_field("carousel_imagem"), 'projeto-cover', 'mxlg:hide w-full', false); ?>
+                        <?php mcs_img_tag_generate(get_field("carousel_imagem_mobile"), 'projeto-cover-mobile', 'lg:hide w-full', false); ?>
+                    </figure>
+                    <?php if (get_field('carousel_texto')) { ?>
+                        <?php the_field('carousel_text_cor') ?>
+                        <p <?php if (get_field('carousel_texto_cor')) echo 'style="color:' . get_field("carousel_texto_cor") . ';"' ?> class="absolute typography-h1 mxlg:w-[80vw] lg:w-[40vw] mxlg:left-[24px] lg:left-[45px] top-[50%] -translate-y-[50%]"><?php the_field('carousel_texto'); ?></p>
+                    <?php } ?>
+                    <div class="absolute mxlg:left-[24px] lg:left-[45px] mxlg:bottom-[30px] lg:bottom-[30px] lg:max-w-[600px] text-white project-name">
+                        <p><strong class="font-sans-medium"><?php the_title(); ?></strong><?php if (get_field('descricao')) { ?> <span class="desc"><span class="sep">—</span> <?php the_field('descricao'); ?><?php } ?></span></p>
+                    </div>
+                </a>
+            </div>
+        <?php endif; ?>
+        <?php
+        $projetos_car_arr = array(
+            'post_type' => 'mcsprojeto',
+            'posts_per_page' => 5,
+            'meta_query' => array(
+                array(
+                    'key'     => 'carousel_home',
+                    'value'   => '1',
+                    'compare' => 'LIKE',
+                ),
+            ),
+            'orderby' => 'rand'
+        );
 
-$projetos_car_qry = new WP_Query($projetos_car_arr);
-if (function_exists('get_field') && $projetos_car_qry->have_posts()) :
-    $projetos_car_ids = array();
-?>
-    <div class="swiper-cover swiper-container">
-        <div class="swiper-wrapper">
+        $projetos_car_qry = new WP_Query($projetos_car_arr);
+        if (function_exists('get_field') && $projetos_car_qry->have_posts()) :
+            $projetos_car_ids = array();
+        ?>
             <?php
             while ($projetos_car_qry->have_posts()) {
                 $projetos_car_qry->the_post();
@@ -59,14 +76,14 @@ if (function_exists('get_field') && $projetos_car_qry->have_posts()) :
             <?php
             }
             ?>
-        </div>
-        <!-- /.swiper-wrapper -->
-        <div class="swiper-pagination"></div>
+        <?php
+        endif;
+        wp_reset_postdata();
+        ?>
     </div>
-<?php
-endif;
-wp_reset_postdata();
-?>
+    <!-- /.swiper-wrapper -->
+    <div class="swiper-pagination"></div>
+</div>
 
 <article class="container py-120 text-center">
     <div class="lg:w-[50%] mx-auto">

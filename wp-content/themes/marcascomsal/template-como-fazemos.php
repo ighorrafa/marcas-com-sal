@@ -13,24 +13,24 @@ get_header();
         </div>
     </div>
 </section>
-<section id="carousel">
-    <div class="container">
-        <h6 class="font-sans-medium"><?php the_field('sub_title_1') ?></h6>
-        <div class="swiper swiper-phrases">
-            <div class="swiper-wrapper">
-                <?php if (have_rows('carousel')) :
-                    while (have_rows('carousel')) : the_row(); ?>
+<?php if (have_rows('carousel')) : ?>
+    <section id="carousel">
+        <div class="container">
+            <h6 class="font-sans-medium"><?php the_field('sub_title_1') ?></h6>
+            <div class="swiper swiper-phrases">
+                <div class="swiper-wrapper">
+                    <?php while (have_rows('carousel')) : the_row(); ?>
                         <div class="swiper-slide">
                             <h1 class="font-sans-medium"><?php the_sub_field('label') ?></h1>
                         </div>
-                <?php endwhile;
-                endif; ?>
+                    <?php endwhile; ?>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 <section id="entregas">
     <div class="container">
         <h6 class="font-sans-medium"><?php the_field('sub_title_2') ?></h6>
